@@ -5,7 +5,7 @@ import BlogCase from '../BlogCase/BlogCase';
 const Home = () => {
     return (
         <div>
-            <Header></Header>
+            
             <Hero></Hero>
             <BlogCase></BlogCase>
         </div>

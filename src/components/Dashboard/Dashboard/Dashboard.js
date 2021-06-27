@@ -6,7 +6,7 @@ const Dashboard = () => {
 
     const [posts, setPosts] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:5000/blogs")
+        fetch("https://warm-sea-49462.herokuapp.com/blogs")
         .then(res => res.json())
         .then(data => setPosts(data))
     },[]);
@@ -18,7 +18,7 @@ const Dashboard = () => {
 
 
 
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://warm-sea-49462.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

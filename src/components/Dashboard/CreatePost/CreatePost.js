@@ -19,7 +19,7 @@ const CreatePost = () => {
 
 
         }
-        const url = `http://localhost:5000/createPost`;
+        const url = `https://warm-sea-49462.herokuapp.com/createPost`;
 
         fetch(url, {
             method: 'POST',

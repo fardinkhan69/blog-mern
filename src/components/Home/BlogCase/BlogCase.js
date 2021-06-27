@@ -5,7 +5,7 @@ const BlogCase = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://warm-sea-49462.herokuapp.com/blogs")
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, []);

@@ -1,5 +1,6 @@
 import React from "react";
-import './Header.css'
+import './Header.css';
+import { Link} from 'react-router-dom'
 const Header = () => {
   return (
     <div className="background-gr"> 
@@ -11,9 +12,9 @@ const Header = () => {
       <div className="navigation">
         <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <Link class="navbar-brand" to="/">
               Navbar
-            </a>
+            </Link>
             <button
               class="navbar-toggler"
               type="button"
@@ -28,61 +29,30 @@ const Header = () => {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">
+                  <Link class="nav-link active" aria-current="page" to="/">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Link
-                  </a>
+                  <Link class="nav-link" to="/allBlog">
+                    Blog
+                  </Link>
                 </li>
-                <li class="nav-item dropdown">
-                  <a
-                    class="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Action
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+                
                 <li class="nav-item">
-                  <a
+                  <Link to ="/dashboard"
                     class="nav-link"
                     href="#"
-                    tabindex="-1"
+                    
                     
                   >
-                    Disabled
-                  </a>
+                    Dashboard
+                  </Link>
                 </li>
               </ul>
-              <button class="btn btn-outline-light ml-3" type="submit">
-                  Log in
-                </button>
+              <Link className="btn btn-outline-light ml-3" to="/login">
+                Log In 
+              </Link>
             </div>
           </div>
         </nav>
